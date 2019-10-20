@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Success</title>
+    <style>
+        #success {
+            text-align: center;
+        }
+        h1 {
+            color: forestgreen;
+        }
+        a {
+            text-decoration: none;
+            width: 100%;
+            background-color: #d55d4d;
+            color: #f4cb91;
+            padding: 1rem 10% 1rem;
+            font-size: 1.3rem;
+        }
+        span {
+            color: gray;
+        }
+    </style>
+</head>
+<body>
+    <div id="success">
+        <h1>恭喜你提交成功!</h1>
+        <img src="/static/image/{{fname}}" width="400" height="400" alt="你的图片被外星人劫持了～～"/>
+        <span>{{fname}}</span>
+    </div>
+    <div style="margin-top: 2rem;width: 100%;text-align: center;">
+        <a href="/upload">重新开始</a>
+    </div>
+</body>
+</html>

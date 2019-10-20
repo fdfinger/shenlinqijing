@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>上传</title>
+    <style>
+        form {
+            height: 100%;
+        }
+
+        input[type=file] {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0 1rem;
+            padding: 2.5rem 1rem;
+            font-size: 1rem;
+            background-color: #d55d4d;
+            margin: 1rem 0;
+            color: #fff;
+            border: 1px solid #d55d4d;
+            border-radius: .5em;
+        }
+
+        input[type=submit] {
+            width: 100%;
+            background-color: #d55d4d;
+            color: #f4cb91;
+            padding: 1rem 10% 1rem;
+            font-size: 1.3rem;
+        }
+
+        .hr {
+            width: 90%;
+            margin-left: 5%;
+            height: .3em;
+            background-color: #f6cf94;
+            border-radius: .2em;
+        }
+
+        label {
+            color: #d55d4d;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin: 3rem 0;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="/upload/success" method="POST" enctype="multipart/form-data">
+        <label>请添加你的照片</label>
+        <input type="file" name="file" placeholder="请选择上传" />
+        <div class="hr"></div>
+        <label>请添加你所需要商品的照片</label>
+        <input type="file" name="user" /><br />
+        <input type="submit" />
+    </form>
+</body>
+
+</html>
