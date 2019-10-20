@@ -1,16 +1,17 @@
 import cv2 as cv
 from PIL import Image
 import numpy as np
-import io
+import io, os
 import random
 
-UPLOAD_FOLDER = 'static/image'
+UPLOAD_FOLDER = 'static/image/'
 basedir = os.path.abspath(os.path.dirname(__file__))
 file_dir = os.path.join(basedir, UPLOAD_FOLDER)
 
 def getpicture(pic1,pic2):
-    img1 = cv.imread(pic1) #MESSI
-    img = cv.imread(pic2) #LOGO
+    img1 = cv.imread(file_dir+pic1) #MESSI
+    print(file_dir+pic2)
+    img = cv.imread(file_dir+pic2) #LOGO
     # img1=cv.resize(img,(300,400))
     # look(img)
     types = 'png'  # 转换后的图片格式
@@ -36,3 +37,7 @@ def getpicture(pic1,pic2):
     cv.waitKey()
     cv.destroyAllWindows()
     return new_file_name
+
+if __name__ == '__main__':
+    address = getpicture('beauty_20191020105245.jpg', '1570546506566.jpg')
+    print(address)
